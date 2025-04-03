@@ -3,7 +3,7 @@ import css from './Contact.module.css'
 import { BiSolidContact } from "react-icons/bi";
 import { FiPhoneCall } from "react-icons/fi";
 import { useDispatch } from 'react-redux';
-import {deleteContact} from '../../redux/contactsSlice'
+import { deleteContact } from '../../redux/contactsOps';
 
 export default function Contact({ contact: { id, name, number } }) {
     const dispatch = useDispatch();

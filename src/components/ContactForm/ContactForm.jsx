@@ -1,7 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOps';
 import { useDispatch } from 'react-redux';
-import { nanoid } from 'nanoid/non-secure';
 import { useId } from 'react';
 import * as yup from 'yup';
 
@@ -31,7 +30,6 @@ export default function ContactForm() {
 
     const handleSubmit = (event, actions) => {
         dispatch(addContact({
-            id: nanoid(),
             name: event.name,
             number: event.number,
         }))
